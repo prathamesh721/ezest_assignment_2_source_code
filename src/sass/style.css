@@ -1,0 +1,6047 @@
+ul {
+  list-style-type: none;
+}
+
+:root {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hideElement {
+  display: none;
+}
+
+.aem-GridColumn {
+  padding: 1em;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.py-1 {
+  padding: 1em 0;
+}
+
+.py-2 {
+  padding: 2em 0;
+}
+
+.px-1 {
+  padding: 0 1em;
+}
+
+.m-1 {
+  margin: 1em;
+}
+
+.my-1 {
+  margin: 1em 0;
+}
+
+.my-2 {
+  margin: 2em 0;
+}
+
+.mx-1 {
+  margin: 0 1em;
+}
+
+/*
+ * ADOBE CONFIDENTIAL
+ *
+ * Copyright 2015 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+/* grid component */
+.aem-Grid {
+  display: block;
+  width: 100%;
+}
+
+.aem-Grid::before,
+.aem-Grid::after {
+  display: table;
+  content: " ";
+}
+
+.aem-Grid::after {
+  clear: both;
+}
+
+/* placeholder for new components */
+.aem-Grid-newComponent {
+  clear: both;
+  margin: 0;
+}
+
+/* column of a grid */
+.aem-GridColumn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clear: both;
+}
+
+/* API function to be called to generate a grid config */
+/* example configuration */
+.aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--1 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--2 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--2 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 14.28571429%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 28.57142857%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 42.85714286%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 57.14285714%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 71.42857143%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 85.71428571%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 14.28571429%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 28.57142857%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 42.85714286%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 57.14285714%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 71.42857143%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 85.71428571%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 12.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 37.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 62.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 87.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 12.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 37.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 62.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 87.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 11.11111111%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 22.22222222%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 44.44444444%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 55.55555556%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 77.77777778%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 88.88888889%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 11.11111111%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 22.22222222%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 44.44444444%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 55.55555556%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 77.77777778%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 88.88888889%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 10%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 70%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 90%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 10%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 70%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 90%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 9.09090909%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 18.18181818%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 27.27272727%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 36.36363636%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 45.45454545%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 54.54545455%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 63.63636364%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 72.72727273%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 81.81818182%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 90.90909091%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 9.09090909%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 18.18181818%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 27.27272727%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 36.36363636%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 45.45454545%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 54.54545455%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 63.63636364%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 72.72727273%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 81.81818182%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 90.90909091%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 8.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 41.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 58.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 91.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--12 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 8.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 41.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 58.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 91.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--12 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid > .aem-GridColumn.aem-GridColumn--default--newline {
+  /* newline behavior */
+  clear: both !important;
+}
+
+.aem-Grid > .aem-GridColumn.aem-GridColumn--default--hide {
+  /* hide behavior */
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--1 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--2 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--2 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--phone--newline {
+    /* newline behavior */
+    clear: both !important;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--phone--hide {
+    /* hide behavior */
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--2 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--2 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--tablet--newline {
+    /* newline behavior */
+    clear: both !important;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--tablet--hide {
+    /* hide behavior */
+    display: none;
+  }
+}
+
+/* maximum amount of grid cells to be provided */
+/* example configuration */
+/* default breakpoint */
+.aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--1 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--2 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--2 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--3 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--4 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--default--5 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--6 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 14.28571429%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 28.57142857%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 42.85714286%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 57.14285714%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 71.42857143%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 85.71428571%;
+}
+
+.aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 14.28571429%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 28.57142857%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 42.85714286%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 57.14285714%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 71.42857143%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 85.71428571%;
+}
+
+.aem-Grid.aem-Grid--default--7 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 12.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 37.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 62.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 87.5%;
+}
+
+.aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 12.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 37.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 62.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 87.5%;
+}
+
+.aem-Grid.aem-Grid--default--8 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 11.11111111%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 22.22222222%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 44.44444444%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 55.55555556%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 77.77777778%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 88.88888889%;
+}
+
+.aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 11.11111111%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 22.22222222%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 44.44444444%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 55.55555556%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 77.77777778%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 88.88888889%;
+}
+
+.aem-Grid.aem-Grid--default--9 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 10%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 70%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 90%;
+}
+
+.aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 10%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 20%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 40%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 60%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 70%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 80%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 90%;
+}
+
+.aem-Grid.aem-Grid--default--10 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 9.09090909%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 18.18181818%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 27.27272727%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 36.36363636%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 45.45454545%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 54.54545455%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 63.63636364%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 72.72727273%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 81.81818182%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 90.90909091%;
+}
+
+.aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 9.09090909%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 18.18181818%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 27.27272727%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 36.36363636%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 45.45454545%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 54.54545455%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 63.63636364%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 72.72727273%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 81.81818182%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 90.90909091%;
+}
+
+.aem-Grid.aem-Grid--default--11 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 8.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 41.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 58.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 91.66666667%;
+}
+
+.aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--12 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--1 {
+  float: left;
+  clear: none;
+  width: 8.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--2 {
+  float: left;
+  clear: none;
+  width: 16.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--3 {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  float: left;
+  clear: none;
+  width: 33.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--5 {
+  float: left;
+  clear: none;
+  width: 41.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+  float: left;
+  clear: none;
+  width: 50%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--7 {
+  float: left;
+  clear: none;
+  width: 58.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--8 {
+  float: left;
+  clear: none;
+  width: 66.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--9 {
+  float: left;
+  clear: none;
+  width: 75%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--10 {
+  float: left;
+  clear: none;
+  width: 83.33333333%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--11 {
+  float: left;
+  clear: none;
+  width: 91.66666667%;
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--default--12 {
+  float: left;
+  clear: none;
+  width: 100%;
+}
+
+.aem-Grid > .aem-GridColumn.aem-GridColumn--default--newline {
+  /* newline behavior */
+  clear: both !important;
+}
+
+.aem-Grid > .aem-GridColumn.aem-GridColumn--default--hide {
+  /* hide behavior */
+  display: none;
+}
+
+/* phone breakpoint */
+@media (max-width: 768px) {
+  .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--1 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--2 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--2 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--3 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--4 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--phone--5 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--6 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--phone--7 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--phone--8 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--phone--9 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--phone--10 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--phone--11 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--phone--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--phone--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--phone--newline {
+    /* newline behavior */
+    clear: both !important;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--phone--hide {
+    /* hide behavior */
+    display: none;
+  }
+}
+
+/* tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--2 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--2 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--2 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--3 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--3 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--4 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--4 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--5 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--tablet--5 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--6 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--6 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--7 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 14.28571429%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 28.57142857%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 42.85714286%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 57.14285714%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 71.42857143%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 85.71428571%;
+  }
+  .aem-Grid.aem-Grid--tablet--7 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--8 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 12.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 37.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 62.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 87.5%;
+  }
+  .aem-Grid.aem-Grid--tablet--8 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--9 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 11.11111111%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 22.22222222%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 44.44444444%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 55.55555556%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 77.77777778%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 88.88888889%;
+  }
+  .aem-Grid.aem-Grid--tablet--9 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--10 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 10%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 20%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 30%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 40%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 60%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 70%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 80%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 90%;
+  }
+  .aem-Grid.aem-Grid--tablet--10 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--11 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 9.09090909%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 18.18181818%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 27.27272727%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 36.36363636%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 45.45454545%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 54.54545455%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 63.63636364%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 72.72727273%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 81.81818182%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 90.90909091%;
+  }
+  .aem-Grid.aem-Grid--tablet--11 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--tablet--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--1 {
+    float: left;
+    clear: none;
+    width: 8.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--2 {
+    float: left;
+    clear: none;
+    width: 16.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--3 {
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--5 {
+    float: left;
+    clear: none;
+    width: 41.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--6 {
+    float: left;
+    clear: none;
+    width: 50%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--7 {
+    float: left;
+    clear: none;
+    width: 58.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--8 {
+    float: left;
+    clear: none;
+    width: 66.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--9 {
+    float: left;
+    clear: none;
+    width: 75%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--10 {
+    float: left;
+    clear: none;
+    width: 83.33333333%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--11 {
+    float: left;
+    clear: none;
+    width: 91.66666667%;
+  }
+  .aem-Grid.aem-Grid--tablet--12 > .aem-GridColumn.aem-GridColumn--tablet--12 {
+    float: left;
+    clear: none;
+    width: 100%;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--tablet--newline {
+    /* newline behavior */
+    clear: both !important;
+  }
+  .aem-Grid > .aem-GridColumn.aem-GridColumn--tablet--hide {
+    /* hide behavior */
+    display: none;
+  }
+}
+
+/* Colors: */
+.bg-charcoal {
+  background-color: #172026;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-green {
+  background-color: #2D9D78;
+}
+
+.bg-golden {
+  background-color: #FDBA5E;
+}
+
+.bg-light-blue {
+  background-color: #3D84FF;
+}
+
+.bg-light-red {
+  background-color: #E34850;
+}
+
+.bg-purple {
+  background-color: #6408D3;
+}
+
+.bg-pink {
+  background-color: #F9009A;
+}
+
+.bg-orange {
+  background-color: #EB7327;
+}
+
+/* Font/text values */
+/* Character Styles */
+.display-xl-48-dekstop-only, .heroBanner .heroInnerBanner {
+  font-family: Source Serif Pro;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.display-l-36-, .prodDetailsText h1 {
+  font-family: Source Serif Pro;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.display-m-24- {
+  font-family: Source Serif Pro;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.display-s-20- {
+  font-family: Source Serif Pro;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-heading-xl-24- {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-heading-l-20- {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-heading-m-16- {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 600px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-heading-s-14-, .prodDetailsText .AddToCart {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17.5px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-body-l-20-, .prodDetailsText h2 {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regualr-body-m-16-, header .nav-links a, header .endHeader label, header .endHeader a, .sideBar .firstHead, .sideBar .sideHeading, .sideBar .py05 label, .prodDetailsText .desc, footer a, footer p, footer li {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.regular-body-s-14-, .content {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.blockquote {
+  font-family: Muli;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #181C24;
+}
+
+.numbered-list {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #181C24;
+}
+
+header {
+  position: relative;
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+
+header .logo {
+  letter-spacing: 0.25rem;
+  font-size: 1.5rem;
+}
+
+header .logo.toggle {
+  display: none;
+}
+
+header .burger {
+  display: none;
+  background-color: transparent;
+  border: 0;
+}
+
+header .burger div {
+  width: 1.75rem;
+  height: 0.25rem;
+  background-color: black;
+  margin: 0.25rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+header .toggle #line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .toggle #line2 {
+  opacity: 0;
+}
+
+header .toggle #line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header #inputSearch {
+  padding: 0.25em;
+  width: 30%;
+}
+
+header .hideInput {
+  visibility: hidden;
+}
+
+header .btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+header .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav-links li {
+  list-style: none;
+  padding: 0.75em;
+}
+
+header .nav-links a {
+  text-decoration: none;
+}
+
+header .bottomLinks {
+  display: none;
+}
+
+header .mobileHide {
+  display: block;
+}
+
+header .desktopHide {
+  display: none;
+}
+
+header .headerOuter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90vw;
+}
+
+header .endHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .endHeader img {
+  padding: 0 0.37em;
+}
+
+.heroBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+.heroBanner .heroInnerBanner {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 1em 1em 1em 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: black;
+}
+
+.heroBanner .heroInnerBanner div {
+  position: absolute;
+  margin: auto;
+  height: 0.5rem;
+  width: 10rem;
+  background-color: #1F39FF;
+  border-radius: 0.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 25%;
+}
+
+.heroBanner img {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 1em 1em 1em 0;
+}
+
+.CheckBoxContainer input {
+  height: 50px;
+}
+
+.sideBar {
+  padding: 1em;
+}
+
+.sideBar .sideHeading {
+  font-weight: bold;
+}
+
+.sideBar .py {
+  padding: 1em 0;
+}
+
+.sideBar .square {
+  height: 2.5rem;
+  width: 4.063rem;
+  margin: 0.25em;
+  border-radius: 0.375rem;
+}
+
+.sideBar .otherColorClass {
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#AF52FF), color-stop(16%, #7950E8), color-stop(29%, #4F5ADA), color-stop(43%, #57CB76), color-stop(56%, #EBC250), color-stop(69%, #FF8810), color-stop(83%, #E32F0F), to(#BF1919)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #AF52FF 0%, #7950E8 16%, #4F5ADA 29%, #57CB76 43%, #EBC250 56%, #FF8810 69%, #E32F0F 83%, #BF1919 100%) 0% 0% no-repeat padding-box;
+}
+
+.sideBar .border1 {
+  border: 1px solid gray;
+}
+
+.sideBar .borderBottom {
+  border-bottom: 1px solid gray;
+  margin-bottom: 0.5em;
+}
+
+.sideBar .colorGroup {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sideBar .py05 {
+  padding: 0.5 0;
+}
+
+.produFilters {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.ui.cards > .card {
+  padding: 1em;
+}
+
+.ui.cards > .card > .image {
+  /* height: 250px; */
+  height: 10rem;
+  padding: 1.25em;
+  background: #fff;
+  margin: auto;
+}
+
+.ui.cards > .card > .image > img {
+  height: 100%;
+  max-width: 100%;
+  width: 80%;
+}
+
+.ui.cards > .card > .content > .header {
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20rem;
+  font-weight: bold;
+}
+
+.ui.cards > .card > .content > .description {
+  overflow: hidden;
+}
+
+.ui.cards > .card .meta.price {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.ui.cards > .card .meta.price > a {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.ui.menu.fixed {
+  height: 60px;
+  padding-top: 15px;
+}
+
+.ui.grid.container {
+  margin-top: 45px;
+}
+
+.ui.grid > .row {
+  background: #fff;
+}
+
+.ui.grid > .row > .column.lp {
+  padding: 20px 40px 20px 20px;
+  -ms-flex-item-align: start !important;
+      align-self: flex-start !important;
+}
+
+.ui.grid > .row > .column.rp {
+  padding: 20px 20px 20px 40px;
+  text-align: left;
+  -ms-flex-item-align: start !important;
+      align-self: flex-start !important;
+}
+
+.ui.grid > .row > .column > img,
+.ui.grid > .row > img {
+  height: 100%;
+}
+
+.ui.placeholder .header:not(:first-child):before,
+.ui.placeholder .image:not(:first-child):before,
+.ui.placeholder .paragraph:not(:first-child):before {
+  display: none;
+}
+
+.ui.label,
+.ui.labels .label {
+  font-size: 22px;
+}
+
+.column.rp h1 {
+  color: #333;
+}
+
+.column.rp p {
+  font-size: 18px;
+  color: #777;
+}
+
+.ui.placeholder.segment .column .button,
+.ui.placeholder.segment .column .field,
+.ui.placeholder.segment .column textarea,
+.ui.placeholder.segment .column > .ui.input {
+  background-color: green;
+  border: 1px solid black;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.heartImage:hover {
+  fill: red;
+}
+
+.swatches, .blue_box, .pink_box, .black_box, .gray_box, .gray_outline_box {
+  width: 4rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+}
+
+.prodDetailsMain {
+  padding: 1em;
+}
+
+.content {
+  padding: 1em 0;
+}
+
+.ProdImg {
+  width: 50%;
+  padding: 1em;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.prodDetailsAlign {
+  position: relative;
+  text-align: left;
+  margin: auto;
+  padding: 1em;
+}
+
+.prodDetailsText {
+  margin-bottom: auto;
+}
+
+.prodDetailsText .desc {
+  border-bottom: 1px solid gray;
+}
+
+.prodDetailsText .AddToCart {
+  border: none;
+  background-color: #1F39FF;
+  border-radius: 1.75em;
+  width: 19.875rem;
+  height: 2.5rem;
+  color: #FFFFFF;
+  margin: 0.5em;
+}
+
+.colorSwatches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colorSwatches div {
+  margin: 0.5em;
+}
+
+.blue_box {
+  background-image: url("../../public/Assets/swatches/Swatch 01.png");
+  background-color: #0da0bc;
+}
+
+.pink_box {
+  background-color: #d82578;
+  background-image: url("../../public/Assets/swatches/Swatch 02.png");
+}
+
+.black_box {
+  background-color: #333333;
+  background-image: url("../../public/Assets/swatches/Swatch 03.png");
+}
+
+.gray_box {
+  background-color: #a5a5a5;
+  background-image: url("../../public/Assets/swatches/Swatch 03.png");
+}
+
+.gray_outline_box {
+  border: 1px solid #91959C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.outerSizeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.outerSizeBox div {
+  margin: 0.5em;
+}
+
+.quantityDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 7.125rem;
+  height: 2.5rem;
+  border: 1px solid #91959C;
+  border-radius: 0.375rem;
+}
+
+.quantityWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quantityWrapper button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin: 0.5em;
+}
+
+.AddToCartWrapper img {
+  margin: 1em;
+}
+
+.AddToCartWrapperInner {
+  text-align: center;
+  width: 19.875rem;
+}
+
+.detailsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.detailsWrapper p {
+  padding: 0.5em 0;
+}
+
+.detailsWrapper img {
+  padding: 0.5em;
+}
+
+.detailsInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desc2 {
+  padding: 0.5em 0;
+}
+
+.imgCarousal {
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+.imgCarousal img {
+  width: 75%;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding: 2em;
+}
+
+footer img {
+  padding: 0.5em;
+}
+
+footer .lowerFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .lowerFooter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .lowerFooter li {
+  padding: 0 0.5em;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .display-lmobile-36-, .heroBanner .heroInnerBanner h2 {
+    font-family: Source Serif Pro;
+    font-style: normal;
+    font-weight: 600px;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0px;
+    color: #172026;
+  }
+  /* ==============================Header 2===================================*/
+  header .nav-links {
+    position: absolute;
+    top: 12vh;
+    height: 88vh;
+    width: 100vw;
+    left: 0;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    z-index: 3;
+    -webkit-transform: translateY(-140%);
+            transform: translateY(-140%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    padding: 0;
+  }
+  header li {
+    padding: 0.75em;
+  }
+  header .logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  header .hideLogo {
+    display: none;
+  }
+  header #inputSearch {
+    width: 100%;
+    z-index: 5;
+  }
+  header .mobileHide {
+    display: none;
+  }
+  header .desktopHide {
+    display: block;
+  }
+  header .burger {
+    display: block;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  header .nav-active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  header .bottomLinks {
+    position: absolute;
+    bottom: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .bottomLinks a {
+    padding: 0 1em;
+  }
+  header .bottomLinks img {
+    padding: 0 0 1.5em 1em;
+  }
+  /* ==============================Hero Banner===================================*/
+  .heroBanner {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .heroBanner .heroInnerBanner {
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: auto;
+    width: 75%;
+  }
+  .heroBanner .heroInnerBanner h2 {
+    color: #FFFFFF;
+    padding: 0 0 1em 0;
+  }
+  .heroBanner img {
+    padding: 1em 1em 0em 1em;
+    margin-bottom: 5em;
+  }
+  /*============================Product List============================*/
+  .produFilters {
+    padding: 2em 0 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .produFilters div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .produFilters div img {
+    padding: 0 0.5em;
+  }
+  /*============================SideBar============================*/
+  .sideBarToggle {
+    display: none;
+    -webkit-transform: translateX(-140%);
+            transform: translateX(-140%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .sideBar-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    display: block;
+  }
+  /*============================Product Details============================*/
+  .imgCarousal {
+    display: none;
+  }
+  /* ==============================Footer===================================*/
+  .lowerFooter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  /*============================SideBar============================*/
+  .sideBar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

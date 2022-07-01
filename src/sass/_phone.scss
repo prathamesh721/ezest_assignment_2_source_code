@@ -1,0 +1,201 @@
+@media (min-width: 0px) and (max-width: 767px) {
+ 
+  .display-lmobile-36- {
+    font-family: $unnamed-font-family-source-serif-pro;
+    font-style: $unnamed-font-style-normal;
+    font-weight: $unnamed-font-weight-600;
+    font-size: $unnamed-font-size-36;
+    line-height: $unnamed-line-spacing-45;
+    letter-spacing: $unnamed-character-spacing-0;
+    color: $unnamed-color-172026;
+    }
+  /* ==============================Header 2===================================*/
+
+  header {
+    .nav-links {
+      position: absolute;
+      top: 12vh;
+      height: 88vh;
+      width: 100vw;
+      left: 0;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      z-index: 3;
+      transform: translateY(-140%);
+      transition: transform 0.5s ease-in;
+      padding: 0;
+    }
+
+    li {
+      padding: 0.75em;
+      
+    }
+   
+    .logo {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hideLogo{
+      display: none;
+    }
+    #inputSearch {
+     
+      width: 100%;
+    
+      z-index: 5;
+    }
+    .mobileHide {
+      display: none;
+    }
+    .desktopHide {
+      display: block;
+    }
+
+   
+
+    .burger {
+      display: block;
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    .nav-active {
+      transform: translateY(0%);
+    }
+    .bottomLinks {
+      position: absolute;
+      bottom: 2%;
+      display: flex;
+      justify-content: center;
+
+     a{
+      padding: 0 1em;
+     }
+     img{
+      padding: 0 0 1.5em 1em;
+     }
+    }
+  }
+
+  
+  /* ==============================Hero Banner===================================*/
+  .heroBanner {
+    
+    position: relative;
+    flex-direction: column-reverse;
+    .heroInnerBanner {
+      padding: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin: auto;
+
+      width: 75%;
+      h2{
+        @extend .display-lmobile-36-;
+        color: $white;
+        
+        padding: 0 0 1em 0;
+      }
+    }
+
+    img {
+      padding: 1em 1em 0em 1em;
+      margin-bottom: 5em;
+    }
+  }
+
+    /*============================Product List============================*/
+
+  .produFilters{
+    padding: 2em 0 1em 0;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+
+    div{
+        
+        display: flex;
+        align-items: center;
+
+        img{
+            padding: 0 0.5em;
+        }
+    }
+}
+
+  /*============================SideBar============================*/
+
+  .sideBar{
+    margin-top: 1em;
+  }
+  .sideBarToggle {
+    display: none;
+    transition: transform 0.8s ease-in;
+    transform: translateX(-140%);
+      
+  }
+
+  .sideBar-active{
+    transform: translateX(0%);
+    display: block;
+  }
+  .crossHide{
+    visibility: hidden;
+}
+
+  /*============================Product Details============================*/
+
+  .imgCarousal {
+    display: none;
+  }
+
+  /* ==============================Footer===================================*/
+  .lowerFooter {
+    flex-direction: column;
+  }
+}
+
+// //Header Version 2
+// header{
+//   // nav{
+//   // display: inline-block;
+//   //  }
+//   .nav-links{
+//         position: absolute;
+
+//         top: 12vh;
+//           height: 92vh;
+//           background-color: wheat;
+//           width: 100vw;
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           z-index: 3;
+//           transform: translateY(-140%);
+//           transition: transform 0.5s ease-in;
+//           padding: 2em;
+//       }
+
+//   .burger {
+//         display: block;
+//         margin-right: auto;
+//         cursor: pointer;
+//       }
+//       .nav-active {
+//         transform: translateY(0%);
+//       }
+//       .textHide{
+//         display: none;
+//       }
+
+// }
+
+// }

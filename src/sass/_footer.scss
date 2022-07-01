@@ -1,0 +1,31 @@
+footer {
+    border-top: 1px solid black;
+    padding: 2em;
+
+    a, p, li {
+        @extend  .regualr-body-m-16-;
+    }
+
+    img {
+        padding: 0.5em;
+    }
+
+    .lowerFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+
+
+        }
+
+        li {
+            padding: 0 0.5em;
+
+           
+        }
+
+    }
+}

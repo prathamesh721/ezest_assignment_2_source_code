@@ -1,0 +1,43 @@
+
+
+    /* Colors: */
+    $primary-d1: #172BC4;
+    $primary-m1: #336DFF;
+    $primary-brand: #1F39FF;
+    $primary-l1: #3D84FF;
+    $gray-d2: #181C24;
+    $gray-d1: #535965;
+    $gray-m1: #91959C;
+    $gray-l2: #B5B7BC;
+    $gray-l1: #E5E5E7;
+    $white: #FFFFFF;
+    $positive-2: #12805C;
+    $positive-1: #268E6C;
+    $negative-2: #C9252D;
+    $negative-1: #D7373F;
+    $unnamed-color-172026: #172026;
+    
+    $oxford-blue-354e57: green;
+    $alabasterr-f7f7f7: wheat;
+
+  
+    
+    
+    $colorsPanel: (
+        charcoal: $unnamed-color-172026,
+        white: $white,
+        green: #2D9D78,
+        golden: #FDBA5E ,
+        light-blue: $primary-l1,
+        light-red: #E34850,
+        purple: #6408D3 ,
+        pink: #F9009A ,
+        orange:#EB7327 
+    );
+    
+    @each $key, $value in $colorsPanel {
+        .bg-#{$key} {
+            background-color: $value;
+        }
+    }
+    

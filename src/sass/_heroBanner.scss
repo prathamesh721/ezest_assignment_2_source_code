@@ -1,0 +1,35 @@
+.heroBanner{
+    display: flex;
+    padding: 1em;
+    .heroInnerBanner{
+        @extend .display-xl-48-dekstop-only;
+        position: relative;
+        text-align: center;
+        
+        color: white;
+        padding: 1em 1em 1em 1em;
+        flex: 1;
+        background-color: black;
+        div{
+            position: absolute;
+            margin: auto;
+            height: 0.5rem;
+            
+            width: 10rem;
+            background-color:  $primary-brand;
+            border-radius: 0.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 25%;
+
+        }
+
+    }
+    img{
+        flex: 2;
+        padding: 1em 1em 1em 0;
+    }
+    
+}
+
+

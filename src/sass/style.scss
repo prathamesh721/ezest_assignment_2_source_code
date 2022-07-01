@@ -1,0 +1,64 @@
+
+ul {
+    list-style-type: none;
+}
+
+:root{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.hideElement{
+    display: none;
+}
+.aem-GridColumn{
+    padding: 1em;
+}
+
+//Padding classes
+.p-1{
+    padding: 1em;
+}
+.py-1{
+    padding: 1em 0;
+}
+.py-2{
+    padding: 2em 0;
+}
+.px-1{
+    padding: 0 1em;
+
+}
+
+//Padding classes
+.m-1{
+    margin: 1em;
+}
+.my-1{
+    margin: 1em 0;
+}
+.my-2{
+    margin: 2em 0;
+}
+.mx-1{
+    margin: 0 1em;
+}
+@import 'aemGrid';
+
+@import 'variables';
+
+@import 'characterStyle';
+
+// @import 'header';
+@import 'header2';
+
+@import 'heroBanner';
+@import 'checkBox';
+@import 'sideBar';
+
+@import 'prodList';
+@import 'prodDetails';
+@import 'footer';
+@import 'phone';
+@import 'tablet';

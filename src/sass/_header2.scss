@@ -1,0 +1,109 @@
+header {
+ 
+  position: relative;
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px solid black;
+  
+
+  .logo {
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .logo.toggle {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+    background-color: transparent;
+    border: 0;
+
+    div {
+      width: 1.75rem;
+      height: 0.25rem;
+      background-color: black;
+      margin: 0.25rem;
+      transition: transform 0.3s ease-in;
+    }
+  }
+
+  .toggle #line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle #line2 {
+    opacity: 0;
+  }
+
+  .toggle #line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+
+  #inputSearch {
+    padding: 0.25em;
+    width: 30%;
+  }
+
+  .hideInput {
+    visibility: hidden;
+  }
+
+  .btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+
+  .nav-links {
+   
+    display: flex;
+
+    li {
+      list-style: none;
+      padding: 0.75em;
+    }
+
+    a {
+      text-decoration: none;
+      @extend .regualr-body-m-16-;
+    }
+  }
+
+  .bottomLinks {
+    display: none;
+  }
+
+  //For hiding element on different devices
+
+  .mobileHide {
+    display: block;
+  }
+
+  .desktopHide {
+    display: none;
+  }
+
+  .headerOuter {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 90vw;
+  }
+
+  .endHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+label, a{
+  @extend .regualr-body-m-16-;
+}
+    img {
+      padding: 0 0.37em;
+    }
+  }
+}
