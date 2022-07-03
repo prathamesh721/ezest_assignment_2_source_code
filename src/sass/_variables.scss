@@ -41,3 +41,21 @@
         }
     }
     
+
+    @mixin flexAlign {
+        display: flex;
+        align-items: center;
+    }
+
+    @mixin flexAlignJust{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    @mixin flexJust{
+        display: flex;
+        justify-content: center;
+
+    }

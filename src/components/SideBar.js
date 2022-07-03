@@ -13,7 +13,7 @@ function SideBar({showSidebar, sideBarToggleCopy}) {
     <aside className={`${showSidebar ? ' sideBar sideBarToggle' : 'sideBar sideBar-active'}`}>
       
       <p className='firstHead'>Clothing / Women’s / Outerwear</p> 
-      <div className='filterHead borderBottom'><p className='py sideHeading'>Filters</p><img src={crosscircle} onClick={toggleSidebarCopy} className='crossHide'/></div>
+      <div className='filterHead borderBottom'><p className='py sideHeading'>Filters</p><img src={crosscircle} onClick={toggleSidebarCopy} className='crossHide' alt='cross icon'/></div>
       <p className='sideHeading'>Attribute</p>
       <CheckBox4 />
       <p className='py borderBottom sideHeading'>Attribute</p>

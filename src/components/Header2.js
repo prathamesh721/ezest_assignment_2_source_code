@@ -7,19 +7,22 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
   //Cart Related Code
+  const st = useSelector((state) => {
+    return state.handlecartSlice.items;
+  });
 
-  const state = useSelector((state) => state.handleCart);
+  const totalcartitem = st.length;
+  console.log(totalcartitem);
 
-  //Header Functions
   //For collaspible Navigation
   const [isActive, setActive] = useState(false);
 
   const navSlide = () => {
     setActive(!isActive);
   };
-  //For collaspible Input 
+
+  //For collaspible Input
   const [displayIn, setdisplayIn] = useState(false);
 
   const hideInput = () => {
@@ -30,77 +33,86 @@ const Header = () => {
     <React.Fragment>
       <header role="banner" id="header">
         <div className="headerOuter">
-
           <button className="burger" onClick={navSlide}>
             <div id="line1"></div>
             <div id="line2"></div>
             <div id="line3"></div>
           </button>
 
-          <a href="/">
-            <img src={logo} className={displayIn ? 'hideLogo' : 'logo'} />
+          <a href="/ezest_assessment_2_v2">
+            <img src={logo} className={displayIn ? "hideLogo" : "logo"} alt='brand logo'/>
           </a>
 
           <nav role="navigation">
             <ul className={isActive ? "nav-links nav-active" : "nav-links"}>
-              <li aria-label="See Shop Categories" className="desktopHide borderBottomHead">Shop Categories</li>
+              <li
+                aria-label="See Shop Categories"
+                className="desktopHide borderBottomHead"
+              >
+                Shop Categories
+              </li>
               <li>
-                <a href="" aria-label="See women products">
+                <a href="#" aria-label="See women products">
                   Women
                 </a>
               </li>
               <li>
-                <a href="" aria-label="See men products">
+                <a href="#" aria-label="See men products">
                   Men
                 </a>
               </li>
               <li>
-                <a href="" aria-label="See Smart Gear products">
+                <a href="#" aria-label="See Smart Gear products">
                   Smart Gear
                 </a>
               </li>
               <li>
-                <a href="" aria-label="See Accessories">
+                <a href="#" aria-label="See Accessories">
                   Accessories
                 </a>
               </li>
 
               <div className="bottomLinks desktopHide">
-                <img src={user} />
-                <a href="#" aria-label="See User Account">Account</a>
-                <a href="#" aria-label="Go to Sign in" >Sign-in</a>
+                <img src={user} alt='User Account'/>
+                <a href="#" aria-label="See User Account">
+                  Account
+                </a>
+                <a href="#" aria-label="Go to Sign in">
+                  Sign-in
+                </a>
               </div>
             </ul>
           </nav>
 
           <div className="endHeader">
             <input
-              className={displayIn ? '' : 'hideInput'}
+              className={displayIn ? "" : "hideInput"}
               type="search"
               placeholder="Search"
               aria-label="Search"
               id="inputSearch"
-
             />
-            <button onClick={hideInput} aria-label="Click to search products" className="btn"><img src={search} /></button>
+            <button
+              onClick={hideInput}
+              aria-label="Click to search products"
+              className="btn"
+            >
+              <img src={search} />
+            </button>
 
             <label for="searchBar" className="mobileHide">
               Search
             </label>
-            <img src={user} className="mobileHide" />
-            <a aria-label="Go to Sign in" className="mobileHide">Sign in</a>
-            <Link to="/cart">
-              <img src={shoppingBag} />
+            <img src={user} alt='Sign in' className="mobileHide" />
+            <a aria-label="Go to Sign in" className="mobileHide">
+              Sign in
+            </a>
+
+            <Link to="/ezest_assessment_2_v2/cart">
+              <img src={shoppingBag} alt='shopping cart' />
             </Link>
-            {/* <a aria-label="Click to see cart items" className="mobileHide">Cart({state.length})</a> */}
+            <span>{totalcartitem}</span>
           </div>
-
-
-
-          {/* 
-          <button className="btn" onClick={displayInput}>
-            <img src={search} />
-          </button> } */}
         </div>
       </header>
     </React.Fragment>

@@ -2,6 +2,12 @@
 ul {
     list-style-type: none;
 }
+button{
+    transition: 0.1s ease-in;
+}
+button:hover{
+    transform: scale(0.98);
+}
 
 :root{
     padding: 0;
@@ -44,6 +50,10 @@ ul {
 .mx-1{
     margin: 0 1em;
 }
+
+.customContainer{
+    padding: 0 2em;
+}
 @import 'aemGrid';
 
 @import 'variables';
@@ -52,12 +62,13 @@ ul {
 
 // @import 'header';
 @import 'header2';
-
+@import 'loadingSpinner';
 @import 'heroBanner';
 @import 'checkBox';
 @import 'sideBar';
-
+@import 'shoppingCart';
 @import 'prodList';
+@import 'productComp';
 @import 'prodDetails';
 @import 'footer';
 @import 'phone';

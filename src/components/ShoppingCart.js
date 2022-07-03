@@ -1,90 +1,76 @@
-import React from 'react';
+import React from "react";
+import { useSelector } from "react-redux";
 
-import leggings from '../Assets/leggings.png';
-import sportsb from '../Assets/sportsb.png';
-import PP_BTN from '../Assets/PP_BTN.png';
-import checkout from '../Assets/checkout.png';
-import chevrondown from '../Assets/chevron-down.svg';
-import minuscircle from '../Assets/minus-circle.svg';
-import pluscircle from '../Assets/plus-circle.svg';
-import square from '../Assets/square.svg';
-import edit2 from '../Assets/edit-2.svg';
-import trash2 from '../Assets/trash-2.svg';
-import heart from '../Assets/heart.svg';
-import{ useSelector } from "react-redux";
+import PP_BTN from '../Assets/PP_BTN/PP_BTN.png';
+import lock from '../Assets/Icons/lock.svg';
+import chevrondown from "../Assets/Icons/chevron-down.svg";
+import edit2 from "../Assets/Icons/edit-2.svg";
+import trash2 from "../Assets/Icons/trash-2.svg";
+import heart from "../Assets/Icons/heart.svg";
 
 
-
-// import {incNumber , decNumber } from '../redux/actions/productsActions';
-// import {
-//   useDispatch , useSelector
-// } from 'react-redux';
-
-function ShoppingCart() 
-{
+function ShoppingCart() {
   const shoppingbagitem = useSelector((Value) => Value.handlecartSlice.items);
-  // const myState = useSelector((state)=>state.changeTheNumber);
-  // const dispatch = useDispatch();
+ 
   return (
-    <section>
-      <div className='aem-Grid aem-Grid--12 shop-head'>
+    <section className="shoppingCart customContainer">
+      <div className="aem-Grid aem-Grid--12 shop-head">
         <h1>Your Shopping Bag</h1>
-        <div className='bottom-line'></div>
+        <div className="bottom-line"></div>
       </div>
 
+      <div className="aem-Grid aem-Grid--12 shoppingBagWrapper">
+        {/* ==============8 column inner grid starts==========*/}
 
-      <div className='aem-Grid aem-Grid--12'>
-        <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4'>
-          <div className='aem-Grid aem-Grid--4'>
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--2 '>
-              
-              {shoppingbagitem.map(val=>{return(<div className='shopping-cart'>
-                <img src={val.image}/>
-              </div>)})}
-            </div>
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--2 prod-details'>
-              
+        {shoppingbagitem.map((val) => {
+          return (
+            <React.Fragment>
+              <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 leftSideCart">
+                <div className="shopping-cart">
+                  <img src={val.image} className="prodImg" />
+                </div>
 
-             
-               
-              {shoppingbagitem.map(val=>{return(<div className='aem-GridColumn aem-GridColumn--default--6 cart-details'>
-              <h1>{val.title}</h1>
-              <p>Size : Medium</p>
-              <p>Color : Storm</p>
-              <p>${val.price}</p>
-              
-              
-              </div>)})}
+                <div className="aem-GridColumn aem-GridColumn--default--6 cart-details">
+                  <h1>{val.title}</h1>
+                  <p>Size : Medium</p>
+                  <p>Color : Storm</p>
+                  <p>${val.price}</p>
+                </div>
 
-            </div>
-          </div>
+                <div className="sharingOuter">
+                  <div className="py-1 cartBtn">
+                    <button>-</button>
+                    <div className="quantityDiv">1</div>
+                    <button>+</button>
+                  </div>
 
-        </div>
+                  <div className="sharingOption">
+                    <div className="sharingInner">
+                      <img src={edit2} alt='edit icon'/>
+                      <span> Edit item</span>
+                    </div>
+                    <div className="sharingInner">
+                      <img src={trash2} alt='sharing icon'/>
+                      <span> Remove</span>
+                    </div>
+                    <div className="sharingInner">
+                      <img src={heart} alt='heart icon'/>
+                      <span> Save for later</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </React.Fragment>
 
-        <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4'>
-          <div className='aem-Grid aem-Grid--4'>
-            <div className='aem-GridColumn aem-GridColumn--default--2'>
-               <div className='cart-btn'>
-                   <button>+</button>
-                   <input type="text" id='' name='' className='cart-input'/>
-                   <button>-</button>
-               </div>
-            </div>
-            <div className='aem-GridColumn aem-GridColumn--default--2'>
-             <div><img src={edit2}/><span>Edit item</span></div>
-             <div> <img src={trash2}/><span>Remove</span></div>
-             <div> <img src={heart}/><span>Save for later</span></div>
-            </div>
-          </div>
+          );
+        })}
 
-          
-        </div>
+        {/* ==============8 column inner grid ends==========*/}
 
+        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 pricingSummary">
 
-
-        <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4 cart-total'>
-          <div className='aem-Grid aem-Grid--4'>
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--2'>
+          <div className="cartSummary">
+            <div>
               <h3>Pricing Summary</h3>
               <ul>
                 <li>Subtotal</li>
@@ -95,8 +81,8 @@ function ShoppingCart()
                 <h3>Estimated Total</h3>
               </ul>
             </div>
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--2'>
-
+            <div>
+              <h3 className="blankHeader">""</h3>
               <ul>
                 <li></li>
                 <li>$ 388.00</li>
@@ -107,41 +93,47 @@ function ShoppingCart()
                 <h3>$ 233.68</h3>
               </ul>
             </div>
-
-          
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4 check'>
-              <img src={checkout} />
-            </div>
-            <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4'>
-              <img src={PP_BTN} />
-            </div>
-          </div>
-         </div>
-      </div>
-
-      <div className='aem-Grid aem-Grid--12'>
-        <div className='aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--8'>
-          <button class="accordion">Estimate your Shipping <span>shipping to 91001 <img src={chevrondown}/> </span></button>
-          <div className="panel">
-            <p>Lorem ipsum...</p>
           </div>
 
-          <button class="accordion">Enter a Coupon Code<span>20%discount applied <img src={chevrondown}/></span></button>
-          <div className="panel">
-            <p>Lorem ipsum...</p>
+          <div className="aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4 check">
+            <button className="checkOutBtn"><img src={lock} alt='lock icon'/>CHECKOUT</button>
+          </div>
+          <div className="aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4">
+            <img src={PP_BTN} alt='payment gateway'/>
           </div>
 
-          <button class="accordion">Apply Gift Card </button>
-          <div className="panel">
-            <p>Lorem ipsum...</p>
-          </div>
         </div>
       </div>
 
-     
-     
-    </section>
-  )
+      {/*========================= Bottom Section =============== */}
+
+      <div className="aem-Grid aem-Grid--12">
+        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--8">
+          <button class="accordion">
+            <p> Estimate your Shipping{" "}</p>
+            <span>
+              shipping to 91001 <img src={chevrondown} alt='dropdown icon'/>{" "}
+            </span>
+          </button>
+
+
+          <button class="accordion">
+            <p> Enter a Coupon Code</p>
+            <span>
+              20%discount applied <img src={chevrondown} alt='dropdown icon' />
+            </span>
+          </button>
+
+
+          <button class="accordion">
+            <p>Apply Gift Card </p>
+            <img src={chevrondown} alt='dropdown icon'/>
+          </button>
+
+        </div>
+      </div>
+    </section >
+  );
 }
 
-export default ShoppingCart
+export default ShoppingCart;

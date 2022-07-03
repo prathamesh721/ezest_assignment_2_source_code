@@ -1,17 +1,20 @@
 .sideBar {
     padding: 1em;
 
-    .firstHead{
+    .firstHead {
         @extend .regualr-body-m-16-;
     }
-    .filterHead{
-        display: flex;
-        justify-content: center;
+
+    .filterHead {
+       @include flexJust;
         justify-content: space-between;
     }
-.crossHide{
-    display: none;
-}
+
+   
+    .crossHide{
+      display: none;
+     }
+
     .sideHeading {
         font-weight: bold;
         @extend .regualr-body-m-16-;

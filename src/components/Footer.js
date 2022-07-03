@@ -38,15 +38,15 @@ const Footer = () => {
                         <li><a href='#'><strong>Follow Us!</strong></a></li>
                         <li >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
                         <div>
-                        <a href='#'><img src={instagram} className='footerIcons' /></a>
-                        <a href='#'><img src={facebook} className='footerIcons' /></a>
-                        <a href='#'><img src={twitter} className='footerIcons' /></a> 
+                        <a href='#'><img src={instagram} alt='Instagram Account' className='footerIcons' /></a>
+                        <a href='#'><img src={facebook} alt='Facebook page' className='footerIcons' /></a>
+                        <a href='#'><img src={twitter} alt='Follow on Twitter' className='footerIcons' /></a> 
                         </div>
                     </ul>
                 </div>
             </div>
             <div className='lowerFooter'>
-            <a href='/'><img src={Logo} /></a>
+            <a href='/ezest_assessment_2_v2'><img src={Logo} alt='Brand logo'/></a>
                 <p>&copy; Company Name Address Ave, City Name, State ZIP</p>
                 <ul>
                     <li><a href='#'>Terms of Use</a></li>

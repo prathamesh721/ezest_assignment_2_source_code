@@ -88,16 +88,13 @@ header {
   }
 
   .headerOuter {
-    display: flex;
-    justify-content: center;
+    @include flexJust;
     justify-content: space-between;
     width: 90vw;
   }
 
   .endHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexAlignJust;
     
 label, a{
   @extend .regualr-body-m-16-;

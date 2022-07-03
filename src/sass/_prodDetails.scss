@@ -66,34 +66,32 @@
 
 .blue_box {
   @extend .swatches;
-  background-image: url("../../public/Assets/swatches/Swatch\ 01.png");
+  background-image: url("../Assets/swatches/Swatch\ 01.png");
   background-color: #0da0bc;
 }
 
 .pink_box {
   @extend .swatches;
   background-color: #d82578;
-  background-image: url("../../public/Assets/swatches/Swatch\ 02.png");
+  background-image: url("../Assets/swatches/Swatch\ 02.png");
 }
 
 .black_box {
   @extend .swatches;
   background-color: #333333;
-  background-image: url("../../public/Assets/swatches/Swatch\ 03.png");
+  background-image: url("../Assets/swatches/Swatch\ 03.png");
 }
 
 .gray_box {
   @extend .swatches;
   background-color: #a5a5a5;
-  background-image: url("../../public/Assets/swatches/Swatch\ 03.png");
+  background-image: url("../Assets/swatches/Swatch\ 03.png");
 }
 
 .gray_outline_box {
   @extend .swatches;
   border: 1px solid $gray-m1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexAlignJust;
 }
 
 .outerSizeBox {
@@ -105,9 +103,7 @@
 }
 
 .quantityDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexAlignJust;
   width: 7.125rem;
   height: 2.5rem;
   border: 1px solid $gray-m1;
@@ -115,9 +111,8 @@
 }
 
 .quantityWrapper {
-  display: flex;
-  align-items: center;
- 
+  @include flexAlign;
+
 
   button {
     height: 2rem;
@@ -144,15 +139,16 @@
 
   p {
     padding: 0.5em 0;
-    
+
   }
-  img{
+
+  img {
     padding: 0.5em;
   }
 }
-.detailsInner{
-    display: flex;
-    align-items: center;
+
+.detailsInner {
+ @include flexAlign;
 }
 
 .desc2 {

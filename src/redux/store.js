@@ -1,11 +1,12 @@
-import { legacy_createStore } from "redux";
+import { configureStore } from '@reduxjs/toolkit'
+import cartSlice from "./cartSlice";
 
-import reducers from "./reducers/index";
+const store = configureStore({
+  reducer: {
+    handlecartSlice: cartSlice.reducer,
 
-const store = legacy_createStore(
-  reducers,
-  {},
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+  }
+
+})
 
 export default store;
