@@ -5689,12 +5689,12 @@ header .endHeader img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 247px;
 }
 
@@ -5706,15 +5706,15 @@ header .endHeader img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .shoppingCart .blankHeader {
@@ -5737,6 +5737,10 @@ header .endHeader img {
 
 .produFilters {
   display: none;
+}
+
+.productListing {
+  position: relative;
 }
 
 * {
@@ -6072,6 +6076,26 @@ a {
 
 .imgCarousal img {
   width: 75%;
+}
+
+.paginationWrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.paginationWrapper li {
+  padding: 0.5em;
+}
+
+.paginationWrapper button {
+  background-color: transparent;
+  border: none;
 }
 
 footer {
