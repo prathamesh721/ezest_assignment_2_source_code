@@ -1,0 +1,18 @@
+.paginationWrapper {
+
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+        padding: 0.5em;
+
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+}

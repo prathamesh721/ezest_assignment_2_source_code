@@ -1,12 +1,29 @@
 .shoppingCart {
 
- .pricingSummary{
-    box-shadow: -2px 0px 14px -3px rgba(0,0,0,0.75);
-   margin: auto;
+    .pricingSummary {
+        box-shadow: -2px 0px 14px -3px rgba(0, 0, 0, 0.75);
+        margin: auto;
 
-   
-}
 
+    }
+
+    .cart_empty {
+        text-align: center;
+        padding: 2em;
+        font-weight: bold;
+        color: red;
+
+        .start_shopping {
+            @include flexAlignJust;
+            padding: 1em;
+            
+            img{
+                padding: 0 0.5em;
+            }
+        }
+    }
+
+    
 
     .shop-head {
         text-align: center;
@@ -26,44 +43,48 @@
         background-color: $primary-brand;
         border-radius: 0.25rem;
     }
-   
+
     .prodImg {
-       
+
         width: 10rem;
         height: 20%;
         padding: 1em;
-       
-    }
-   
 
-    .leftSideCart{
-        
+    }
+
+
+    .leftSideCart {
+
         @include flexAlignJust;
         justify-content: space-around;
-      
+
         align-content: center
     }
-    .cartBtn{
+
+    .cartBtn {
         @extend .quantityWrapper;
     }
-    .sharingOuter{
+
+    .sharingOuter {
         display: flex;
-        
-       
+
+
     }
-    .sharingOption{
+
+    .sharingOption {
         padding: 2em;
     }
-    .sharingInner{
+
+    .sharingInner {
         @include flexAlign;
-        
-        img{
+
+        img {
             padding: 0.25em;
         }
     }
 
-    
-    .checkOutBtn{
+
+    .checkOutBtn {
         background-color: $primary-brand;
         color: $white;
         border-radius: 1.75em;
@@ -71,27 +92,31 @@
         border: none;
         @include flexAlignJust;
         width: 247px;
-        img{
+
+        img {
             padding: 0.25em 0.5em;
         }
     }
 
-    .cartSummary{
+    .cartSummary {
         @include flexAlignJust;
         justify-content: space-between;
-        
+
     }
-    .blankHeader{
+
+    .blankHeader {
         visibility: hidden;
     }
 
 
-    .accordion, .panel{
+    .accordion,
+    .panel {
         width: 100%;
         padding: 0.75em;
-        
+
     }
-    .accordion{
+
+    .accordion {
         display: flex;
         justify-content: space-between;
 
