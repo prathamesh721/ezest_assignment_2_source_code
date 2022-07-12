@@ -77,15 +77,7 @@ header {
     display: none;
   }
 
-  //For hiding element on different devices
-
-  .mobileHide {
-    display: block;
-  }
-
-  .desktopHide {
-    display: none;
-  }
+  
 
   .headerOuter {
     @include flexJust;

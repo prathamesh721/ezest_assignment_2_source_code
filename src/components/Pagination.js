@@ -31,12 +31,12 @@ const Pagination = ({ showperpage, onPaginationChange, total }) => {
     return (
         <div className="page">
             <ul className="paginationWrapper">
-                <li><button onClick={() => onButtonClick("prev")}><img src={cright} alt="" /> </button></li>
+                <li><button aria-label="Navigate to previous page" onClick={() => onButtonClick("prev")}><img src={cright} alt="Previous page" /> </button></li>
                 <li><span>1</span></li>
                 <li><span>2</span></li>
                 <li><span>3</span></li>
                 <li><span>4</span></li>
-                <li><button onClick={() => onButtonClick("next")}><img src={cleft} alt="" /> </button></li>
+                <li><button aria-label="Navigate to next page" onClick={() => onButtonClick("next")}><img src={cleft} alt="Next page" /> </button></li>
             </ul>
         </div>
     );

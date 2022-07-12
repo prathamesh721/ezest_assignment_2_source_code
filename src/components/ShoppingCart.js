@@ -53,7 +53,7 @@ function ShoppingCart() {
       {shoppingbagitem.length === 0 ? (
         <div className="cart_empty">
           <p>Sorry! Your cart is empty</p>
-          <Link to="/ezest_assessment_2_v2">
+          <Link to="/">
             <div className="start_shopping">
 
               <img src={arrowLeft} />

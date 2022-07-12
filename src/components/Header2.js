@@ -18,7 +18,7 @@ const Header = () => {
   });
 
   const totalcartitem = cart.length;
-  console.log(totalcartitem);
+  // console.log(totalcartitem);
 
   //For collaspible Navigation
   const [isActive, setActive] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
     <React.Fragment>
       <header role="banner" id="header">
         <div className="headerOuter">
-          <button className="burger" onClick={navSlide}>
+          <button aria-label="Toggle Navigation" className="burger" onClick={navSlide}>
             <div id="line1"></div>
             <div id="line2"></div>
             <div id="line3"></div>
@@ -102,18 +102,18 @@ const Header = () => {
               aria-label="Click to search products"
               className="btn"
             >
-              <img src={search} />
+              <img src={search} alt='Search button' />
             </button>
 
             <label for="searchBar" className="mobileHide">
               Search
             </label>
             <img src={user} alt='Sign in' className="mobileHide" />
-            <a aria-label="Go to Sign in" className="mobileHide">
+            <a href="#" aria-label="Go to Sign in" className="mobileHide">
               Sign in
             </a>
 
-            <Link to="/ezest_assessment_2_v2/cart">
+            <Link to="/ezest_assessment_2_v2/cart" aria-label="Click to see shopping cart">
               <img src={shoppingBag} alt='shopping cart' />
             </Link>
             {/* <span>{cartTotalQuantity}</span> */}

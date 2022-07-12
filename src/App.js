@@ -13,11 +13,12 @@ function App() {
 
       <Routes>
         <Route
-          path="/ezest_assessment_2_v2/product/:productId"
+          path="/ezest_assessment_2_v2/product/:productId" exact
           element={<ProductDetails />}
         />
-        <Route path="/ezest_assessment_2_v2" element={<BodyComponent />} />
-        <Route path="/ezest_assessment_2_v2/cart" element={<ShoppingCart />} />
+        <Route path="/ezest_assessment_2_v2/cart" exact element={<ShoppingCart />} />
+        <Route path="/" exact element={<BodyComponent />} />
+        
       </Routes>
 
       <Footer />

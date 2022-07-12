@@ -5,21 +5,19 @@ import reportWebVitals from './reportWebVitals';
 import './sass/style.scss'
 import store from "./redux/store";
 import { Provider } from "react-redux";
-import { BrowserRouter } from 'react-router-dom';
-import { addProdToCart, decreaseCart, getTotals, removeFromCart } from './redux/cartSlice';
+import { HashRouter } from 'react-router-dom';
+import {getTotals} from './redux/cartSlice';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 store.dispatch(getTotals())
-// store.dispatch(removeFromCart())
-// store.dispatch(addProdToCart())
-// store.dispatch(decreaseCart())
+
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
 
     </Provider>
   </React.StrictMode>
