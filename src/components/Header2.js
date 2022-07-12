@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import logo from "../Assets/Logo.PNG";
 import search from "../Assets/Icons/search.svg";
 import user from "../Assets/Icons/user.svg";
 import shoppingBag from "../Assets/Icons/shopping-bag.svg";
-import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  //Cart Related Code
-  const st = useSelector((state) => {
+// //Cart Related code v2
+//  const cartTotalQuantity = useSelector(state => state.handlecartSlice.cartTotalQuantity)
+
+
+  //Cart Related Code v1
+  const cart = useSelector((state) => {
     return state.handlecartSlice.items;
   });
 
-  const totalcartitem = st.length;
+  const totalcartitem = cart.length;
   console.log(totalcartitem);
 
   //For collaspible Navigation
@@ -111,6 +116,7 @@ const Header = () => {
             <Link to="/ezest_assessment_2_v2/cart">
               <img src={shoppingBag} alt='shopping cart' />
             </Link>
+            {/* <span>{cartTotalQuantity}</span> */}
             <span>{totalcartitem}</span>
           </div>
         </div>

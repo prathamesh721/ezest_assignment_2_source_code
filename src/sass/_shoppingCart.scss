@@ -77,11 +77,19 @@
 
     .sharingInner {
         @include flexAlign;
+        background: none;
+        border: none;
+
+        &:hover{
+            color: black;
+        }
 
         img {
             padding: 0.25em;
         }
     }
+
+    
 
 
     .checkOutBtn {

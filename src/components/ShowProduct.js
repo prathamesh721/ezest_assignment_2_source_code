@@ -1,34 +1,47 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import heart from "../Assets/Icons/heart.svg"
 import Pagination from "./Pagination";
 
 
- 
 
 
-  // Product component accepts products from Product List component
 
-  const ShowProduct = ({ products }) => {
-    const [showperpage] = useState(6)
+// Product component accepts products from Product List component
 
-    const [pagination, stePegination] = useState({
-  
-      start: 0,
-  
-      end: showperpage,
-  
-    })
-  
-    const onPaginationChange = (start, end) => {
-  
-      stePegination({ start: start, end: end })
-  
-    }
+const ShowProduct = ({ products, filtercomponent }) => {
+  const [showperpage] = useState(6)
 
-    const renderList = products.slice(pagination.start, pagination.end).map((product) => {
-      const { id, title, image, price, category } = product;
-      return (
+  const [pagination, stePegination] = useState({
+
+    start: 0,
+
+    end: showperpage,
+
+  })
+
+  const onPaginationChange = (start, end) => {
+
+    stePegination({ start: start, end: end })
+
+  }
+
+  const onFilterSelect = (e) => {
+
+    console.log('onFilterSelect', filtercomponent);
+
+    filtercomponent(e.target.value);
+
+  }
+  
+
+  const renderList = products.slice(pagination.start, pagination.end).map((product) => {
+    const { id, title, image, price, category } = product;
+    return (
+      <>
+
+
+
         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6 aem-GridColumn--tablet--4 productHover" key={id}>
           <Link to={`/ezest_assessment_2_v2/product/${id}`}>
             <div className="ui a cards">
@@ -45,15 +58,19 @@ import Pagination from "./Pagination";
             </div>
           </Link>
         </div>
-      );
-    });
-    return <>{renderList}<div className="page-funtion">
 
-    <Pagination showperpage={showperpage} onPaginationChange={onPaginationChange} />
+        <div className="page-funtion">
 
-  </div></>;
+          <Pagination showperpage={showperpage} onPaginationChange={onPaginationChange} />
 
-    
-  };
+        </div>
+      </>
+
+    );
+  });
+  return <>{renderList}</>;
+
+
+};
 
 export default ShowProduct;

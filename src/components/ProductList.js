@@ -36,23 +36,46 @@ const ProductPage = ({ sideBarToggleCopy, showSidebar }) => {
     sideBarToggleCopy(!showSidebar);
   };
 
+  //Sorting State and function
+  const [sort, setSort] = useState()
+
+  const onfilterChange = (filter) => {
+
+    console.log("onfilter", sort);
+
+    if (filter) {
+
+      const result = products.sort((a, b) => a.price - b.price);
+
+      console.log(products);
+
+      return setSort(result);
+    }
+  }
+
   return (
     <React.Fragment>
       {isLoading ? <LoadingSpinner /> : ""}
 
+
       <div className="aem-Grid aem-Grid--12 produFilters">
         <div onClick={toggleSidebar}>
-          <img src={slider} alt='slider icon'/>
+          <img src={slider} alt='slider icon' />
           <label>Filter Results</label>
         </div>
         <div>
-          <img src={layers} alt='layers icon'/>
-          <label>Sort Products</label>
+          <img src={layers} alt='layers icon' />
+
+          <select id="dropbox" onChange={onfilterChange}>
+            <option>Sort Products</option>
+            <option value="category">Sort by Price</option>
+            <option value="Sort by list">Sort by latest</option>
+          </select>
         </div>
       </div>
 
       <div className="aem-Grid aem-Grid--12 productListing">
-        <ShowProduct products={products} />
+        <ShowProduct products={products} filtercomponent={onfilterChange} />
       </div>
     </React.Fragment>
   );

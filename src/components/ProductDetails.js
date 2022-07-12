@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { productsActions } from "../redux/cartSlice";
+import { addProdToCart } from "../redux/cartSlice";
 import LoadingSpinner from "./LoadingSpinner";
 
 import share2 from "../Assets/Icons/share-2.svg";
@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
   const dispatch = useDispatch();
   const addProduct = (product) => {
-    dispatch(productsActions.addProdToCart({ ...product, quntity: 1 }));
+    dispatch(addProdToCart({ ...product, cartQuantity: 1 }));
   };
   useEffect(() => {
     const requestOptions = {
