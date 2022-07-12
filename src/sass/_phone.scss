@@ -76,7 +76,7 @@
     .bottomLinks {
       position: absolute;
       bottom: 2%;
-     @include flexJust;
+      @include flexJust;
 
       a {
         padding: 0 1em;
@@ -123,13 +123,14 @@
   /*============================Product List============================*/
 
   .produFilters {
+    display: block;
     padding: 2em 0 1em 0;
-  @include flexJust;
+    @include flexJust;
     justify-content: space-around;
 
     div {
 
-     @include flexAlign;
+      @include flexAlign;
 
       img {
         padding: 0 0.5em;
@@ -138,18 +139,19 @@
   }
 
 
-*{
-  .ui.cards > .card > .image {
-    /* height: 250px; */
-    height: 5rem;
-    padding: 0;
-  
+  * {
+    .ui.cards>.card>.image {
+      /* height: 250px; */
+      height: 5rem;
+      padding: 0;
+
+    }
+
+    .ui.cards>.card>.image>img {
+
+      width: 90%;
+    }
   }
-  .ui.cards > .card > .image > img {
-   
-    width: 90%;
-  }
-}
 
 
   /*============================SideBar============================*/
@@ -186,7 +188,7 @@
   .cartBtn {
     text-align: right;
     margin-left: auto;
-   @include flexAlignJust;
+    @include flexAlignJust;
   }
 
   .sharingOuter {
@@ -209,4 +211,3 @@
     flex-direction: column;
   }
 }
-

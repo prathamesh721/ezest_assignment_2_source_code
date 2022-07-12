@@ -9,7 +9,7 @@ import Pagination from "./Pagination";
 
 // Product component accepts products from Product List component
 
-const ShowProduct = ({ products, filtercomponent }) => {
+const ShowProduct = ({ products }) => {
   const [showperpage] = useState(6)
 
   const [pagination, stePegination] = useState({
@@ -26,13 +26,7 @@ const ShowProduct = ({ products, filtercomponent }) => {
 
   }
 
-  const onFilterSelect = (e) => {
 
-    console.log('onFilterSelect', filtercomponent);
-
-    filtercomponent(e.target.value);
-
-  }
   
 
   const renderList = products.slice(pagination.start, pagination.end).map((product) => {

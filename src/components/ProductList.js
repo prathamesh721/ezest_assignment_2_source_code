@@ -59,12 +59,12 @@ const ProductPage = ({ sideBarToggleCopy, showSidebar }) => {
 
 
       <div className="aem-Grid aem-Grid--12 produFilters">
-        <div onClick={toggleSidebar}>
+        <div onClick={toggleSidebar} className='desktopHide'>
           <img src={slider} alt='slider icon' />
           <label>Filter Results</label>
         </div>
         <div>
-          <img src={layers} alt='layers icon' />
+          <img src={layers} alt='layers icon' className='desktopHide'/>
 
           <select id="dropbox" onChange={onfilterChange}>
             <option>Sort Products</option>
@@ -75,7 +75,7 @@ const ProductPage = ({ sideBarToggleCopy, showSidebar }) => {
       </div>
 
       <div className="aem-Grid aem-Grid--12 productListing">
-        <ShowProduct products={products} filtercomponent={onfilterChange} />
+        <ShowProduct products={products} />
       </div>
     </React.Fragment>
   );
