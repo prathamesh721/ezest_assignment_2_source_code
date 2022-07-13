@@ -98,6 +98,7 @@ const Header = () => {
               placeholder="Search"
               aria-label="Search"
               id="inputSearch"
+              role='search'
             />
             <button
               onClick={hideInput}

@@ -5,6 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails";
 import ShoppingCart from "./components/ShoppingCart";
 import Header2 from "./components/Header2";
+import { ToastContainer } from "react-toastify";
+
 
 function App() {
   return (

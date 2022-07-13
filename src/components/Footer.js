@@ -6,7 +6,7 @@ import Logo from "../Assets/Logo.PNG"
 const Footer = () => {
 
     return (
-        <footer>
+        <footer role='contentinfo'>
             <div class="aem-Grid aem-Grid--12">
                 <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--12">
                     <ul>
