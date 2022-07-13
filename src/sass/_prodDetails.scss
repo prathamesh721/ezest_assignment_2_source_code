@@ -53,6 +53,10 @@
     height: 2.5rem;
     color: $white;
     margin: 0.5em;
+
+    &:active{
+      background-color: $primary-d1;
+    }
   }
 }
 

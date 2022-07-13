@@ -1,95 +1,3 @@
-ul {
-  list-style-type: none;
-}
-
-button {
-  -webkit-transition: 0.1s ease-in;
-  transition: 0.1s ease-in;
-}
-
-button:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-}
-
-:root {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.hideElement {
-  display: none;
-}
-
-.aem-GridColumn {
-  padding: 1em;
-}
-
-.p-1 {
-  padding: 1em;
-}
-
-.py-1 {
-  padding: 1em 0;
-}
-
-.py-2 {
-  padding: 2em 0;
-}
-
-.px-1 {
-  padding: 0 1em;
-}
-
-.m-1 {
-  margin: 1em;
-}
-
-.my-1 {
-  margin: 1em 0;
-}
-
-.my-2 {
-  margin: 2em 0;
-}
-
-.mx-1 {
-  margin: 0 1em;
-}
-
-.customContainer {
-  padding: 0 2em;
-}
-
-.mobileHide {
-  display: block;
-}
-
-.desktopHide {
-  display: none;
-}
-
-@font-face {
-  font-family: Muli;
-  src: url(../Assets/fonts/Muli-Black.ttf);
-  src: url(../Assets/fonts/Muli-BlackItalic.ttf);
-  src: url(../Assets/fonts/Muli-Bold.ttf);
-  src: url(../Assets/fonts/Muli-BoldItalic.ttf);
-  src: url(../Assets/fonts/Muli-ExtraBold.ttf);
-  src: url(../Assets/fonts/Muli-ExtraBoldItalic.ttf);
-  src: url(../Assets/fonts/Muli-ExtraLight.ttf);
-  src: url(../Assets/fonts/Muli-ExtraLightItalic.ttf);
-  src: url(../Assets/fonts/Muli-Italic.ttf);
-  src: url(../Assets/fonts/Muli-Light.ttf);
-  src: url(../Assets/fonts/Muli-LightItalic.ttf);
-  src: url(../Assets/fonts/Muli-Regular.ttf);
-  src: url(../Assets/fonts/Muli-SemiBold.ttf);
-  src: url(../Assets/fonts/Muli-SemiBoldItalic.ttf);
-}
-
 /*
  * ADOBE CONFIDENTIAL
  *
@@ -5198,6 +5106,85 @@ button:hover {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
+button {
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+button:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+:root {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hideElement {
+  display: none;
+}
+
+.aem-GridColumn {
+  padding: 1em;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.py-1 {
+  padding: 1em 0;
+}
+
+.py-2 {
+  padding: 2em 0;
+}
+
+.px-1 {
+  padding: 0 1em;
+}
+
+.m-1 {
+  margin: 1em;
+}
+
+.my-1 {
+  margin: 1em 0;
+}
+
+.my-2 {
+  margin: 2em 0;
+}
+
+.mx-1 {
+  margin: 0 1em;
+}
+
+.customContainer {
+  padding: 0 2em;
+}
+
+.mobileHide {
+  display: block;
+}
+
+.desktopHide {
+  display: none;
+}
+
+.text_center {
+  text-align: center;
+  margin: auto;
+}
+
 /* Colors: */
 .bg-charcoal {
   background-color: #172026;
@@ -5233,6 +5220,24 @@ button:hover {
 
 .bg-orange {
   background-color: #EB7327;
+}
+
+@font-face {
+  font-family: Muli;
+  src: url(../Assets/fonts/Muli-Black.ttf);
+  src: url(../Assets/fonts/Muli-BlackItalic.ttf);
+  src: url(../Assets/fonts/Muli-Bold.ttf);
+  src: url(../Assets/fonts/Muli-BoldItalic.ttf);
+  src: url(../Assets/fonts/Muli-ExtraBold.ttf);
+  src: url(../Assets/fonts/Muli-ExtraBoldItalic.ttf);
+  src: url(../Assets/fonts/Muli-ExtraLight.ttf);
+  src: url(../Assets/fonts/Muli-ExtraLightItalic.ttf);
+  src: url(../Assets/fonts/Muli-Italic.ttf);
+  src: url(../Assets/fonts/Muli-Light.ttf);
+  src: url(../Assets/fonts/Muli-LightItalic.ttf);
+  src: url(../Assets/fonts/Muli-Regular.ttf);
+  src: url(../Assets/fonts/Muli-SemiBold.ttf);
+  src: url(../Assets/fonts/Muli-SemiBoldItalic.ttf);
 }
 
 /* Font/text values */
@@ -5634,7 +5639,6 @@ header .endHeader img {
 .shoppingCart .pricingSummary {
   -webkit-box-shadow: -2px 0px 14px -3px rgba(0, 0, 0, 0.75);
           box-shadow: -2px 0px 14px -3px rgba(0, 0, 0, 0.75);
-  margin: auto;
 }
 
 .shoppingCart .cart_empty {
@@ -5678,8 +5682,8 @@ header .endHeader img {
 }
 
 .shoppingCart .prodImg {
-  width: 10rem;
-  height: 20%;
+  width: 6rem;
+  height: 10%;
   padding: 1em;
 }
 
@@ -5697,6 +5701,10 @@ header .endHeader img {
       justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.shoppingCart .cartBtn {
+  padding: 0;
 }
 
 .shoppingCart .sharingOuter {
@@ -5728,6 +5736,15 @@ header .endHeader img {
   padding: 0.25em;
 }
 
+.shoppingCart .cartBtns {
+  max-width: 100%;
+}
+
+.shoppingCart .payPal:active, .shoppingCart .payPal:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
 .shoppingCart .checkOutBtn {
   background-color: #1F39FF;
   color: #FFFFFF;
@@ -5744,6 +5761,10 @@ header .endHeader img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 247px;
+}
+
+.shoppingCart .checkOutBtn:active {
+  background-color: #172BC4;
 }
 
 .shoppingCart .checkOutBtn img {
@@ -5782,10 +5803,17 @@ header .endHeader img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: none;
+  border: 1px solid gray;
 }
 
 .productListing {
   position: relative;
+}
+
+#dropbox {
+  text-align: end;
+  margin-right: 1em;
 }
 
 * {
@@ -5984,6 +6012,10 @@ a {
   height: 2.5rem;
   color: #FFFFFF;
   margin: 0.5em;
+}
+
+.prodDetailsText .AddToCart:active {
+  background-color: #172BC4;
 }
 
 .colorSwatches {
@@ -6187,8 +6219,8 @@ footer .lowerFooter li {
   /* ==============================Header 2===================================*/
   header .nav-links {
     position: absolute;
-    top: 8vh;
-    height: 92vh;
+    top: 9vh;
+    height: 91vh;
     width: 100vw;
     left: 0;
     background-color: white;
@@ -6247,6 +6279,9 @@ footer .lowerFooter li {
             transform: translateY(0%);
   }
   header .bottomLinks {
+    padding: 0.5em 0;
+    border-top: 1px solid black;
+    width: 100%;
     position: absolute;
     bottom: 2%;
     display: -webkit-box;
@@ -6255,6 +6290,9 @@ footer .lowerFooter li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   header .bottomLinks a {
     padding: 0 1em;
@@ -6346,7 +6384,6 @@ footer .lowerFooter li {
   }
   .cartBtn {
     text-align: right;
-    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6356,6 +6393,7 @@ footer .lowerFooter li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0;
   }
   .sharingOuter {
     display: -webkit-box;
@@ -6376,6 +6414,7 @@ footer .lowerFooter li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
   }
   /*============================Product Details============================*/
   .imgCarousal {

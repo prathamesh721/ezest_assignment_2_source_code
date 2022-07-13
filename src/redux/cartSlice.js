@@ -11,29 +11,8 @@ export const cartSlice = createSlice({
   },
   reducers: {
     addProdToCart(state, action) {
-      // console.log(current(state), action, state.items);
-
-      // const product = action.payload;
-      // const existingCartItem = state.items.find(
-      //   (curElem) => curElem.id === product.id
-      // );
-
-      // if (existingCartItem) {
-      //   console.log(existingCartItem);
-
-      //   return state.items.map((curElem) =>
-      //     curElem.id === product.id
-      //       ? { ...curElem, qnty: curElem.qty + 1 }
-      //       : curElem
-      //   );
-      // } else {
-      //   const product = action.payload;
-      //   state.items.push({ ...product, quantity: 1 });
-      // }
-      // localStorage.setItem("items", JSON.stringify(state.items));
-
-
-      const itemIndex = state.items.findIndex((item) => item.id === action.payload.id)
+      
+           const itemIndex = state.items.findIndex((item) => item.id === action.payload.id)
 
       if (itemIndex >= 0) {
         state.items[itemIndex].cartQuantity += 1
@@ -68,7 +47,7 @@ export const cartSlice = createSlice({
 
         state.items = nextCartItems;
       }
-      // state.cartTotalAmount -= state.items[itemIndex].price;
+       state.cartTotalAmount -= state.items[itemIndex].price;
       
 
       localStorage.setItem("items", JSON.stringify(state.items));

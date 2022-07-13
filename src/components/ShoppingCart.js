@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeFromCart, decreaseCart, addProdToCart, getTotals, increaseCart } from '../redux/cartSlice'
@@ -7,7 +7,7 @@ import arrowLeft from '../Assets/Icons/arrow-left-circle.svg'
 import PP_BTN from '../Assets/PP_BTN/PP_BTN.png';
 import lock from '../Assets/Icons/lock.svg';
 import chevrondown from "../Assets/Icons/chevron-down.svg";
-import edit2 from "../Assets/Icons/edit-2.svg"; 
+import edit2 from "../Assets/Icons/edit-2.svg";
 import trash2 from "../Assets/Icons/trash-2.svg";
 import heart from "../Assets/Icons/heart.svg";
 
@@ -15,7 +15,7 @@ import heart from "../Assets/Icons/heart.svg";
 function ShoppingCart() {
   const shoppingbagitem = useSelector((state) => state.handlecartSlice.items);
 
-   const cart = useSelector((state) => state.handlecartSlice.cartTotalAmount);
+  const cart = useSelector((state) => state.handlecartSlice.cartTotalAmount);
 
   //Remove product logic
 
@@ -25,11 +25,12 @@ function ShoppingCart() {
     dispatch(removeFromCart(val))
   }
 
-   //cart totalsum function
+  //cart totalsum function
 
-   useEffect(() => {
+  useEffect(() => {
     dispatch(getTotals())
-    
+
+
   }, [cart, dispatch])
   console.log(cart)
   // Decrease product logic
@@ -72,36 +73,40 @@ function ShoppingCart() {
               return (
                 <React.Fragment>
                   <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 leftSideCart">
-                    <div className="shopping-cart">
-                      <img src={val.image} className="prodImg" />
-                    </div>
+                    <div className="aem-Grid aem-Grid--12">
 
-                    <div className="aem-GridColumn aem-GridColumn--default--6 cart-details">
-                      <h1>{val.title}</h1>
-                      <p>Size : Medium</p>
-                      <p>Color : Storm</p>
-                      <p>${Number.parseFloat(val.price * val.cartQuantity).toFixed(2)}</p>
-                    </div>
-
-                    <div className="sharingOuter">
-                      <div className="py-1 cartBtn">
-                        <button onClick={() => handleDecreaseCart(val)}>-</button>
-                        <div className="quantityDiv">{val.cartQuantity}</div>
-                        <button onClick={() => handleIncreaseCart(val)}>+</button>
+                      <div className="shopping-cart aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--12">
+                        <img src={val.image} className="prodImg" />
                       </div>
 
-                      <div className="sharingOption">
-                        <div className="sharingInner">
-                          <img src={edit2} alt='edit icon' />
-                          <span> Edit item</span>
+                      <div className="cart-details aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--12">
+                        <h1>{val.title}</h1>
+                        <p>Size : Medium</p>
+                        <p>Color : Storm</p>
+                        <p>${Number.parseFloat(val.price * val.cartQuantity).toFixed(2)}</p>
+                      </div>
+
+
+                      <div className="sharingOuter aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 text_center">
+                        <div className="py-1 cartBtn">
+                          <button onClick={() => handleDecreaseCart(val)}>-</button>
+                          <div className="quantityDiv">{val.cartQuantity}</div>
+                          <button onClick={() => handleIncreaseCart(val)}>+</button>
                         </div>
-                        <button className="sharingInner" onClick={() => handleRemoveFromCart(val)}>
-                          <img src={trash2} alt='sharing icon' />
-                          <span> Remove</span>
-                        </button>
-                        <div className="sharingInner">
-                          <img src={heart} alt='heart icon' />
-                          <span> Save for later</span>
+
+                        <div className="sharingOption">
+                          <div className="sharingInner">
+                            <img src={edit2} alt='edit icon' />
+                            <span> Edit item</span>
+                          </div>
+                          <button className="sharingInner" onClick={() => handleRemoveFromCart(val)}>
+                            <img src={trash2} alt='sharing icon' />
+                            <span> Remove</span>
+                          </button>
+                          <div className="sharingInner">
+                            <img src={heart} alt='heart icon' />
+                            <span> Save for later</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -142,10 +147,10 @@ function ShoppingCart() {
               </div>
 
               <div className="aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4 check">
-                <button className="checkOutBtn"><img src={lock} alt='lock icon' />CHECKOUT</button>
+                <button className="checkOutBtn cartBtns"><img src={lock} alt='lock icon' />CHECKOUT</button>
               </div>
               <div className="aem-GridColumn aem-GridColumn--phone--6  aem-GridColumn--tablet--12 aem-GridColumn--default--4">
-                <img src={PP_BTN} alt='payment gateway' />
+                <img src={PP_BTN} alt='payment gateway' className="cartBtns payPal" />
               </div>
 
             </div>

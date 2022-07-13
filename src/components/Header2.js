@@ -50,12 +50,14 @@ const Header = () => {
 
           <nav role="navigation">
             <ul className={isActive ? "nav-links nav-active" : "nav-links"}>
+              <b>
               <li
                 aria-label="See Shop Categories"
-                className="desktopHide borderBottomHead"
+                className="desktopHide"
               >
                 Shop Categories
               </li>
+              </b>
               <li>
                 <a href="#" aria-label="See women products">
                   Women

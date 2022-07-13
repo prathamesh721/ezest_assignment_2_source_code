@@ -37,11 +37,11 @@ const Footer = () => {
                     <ul>
                         <li><a href='#' aria-label='Follow us on social media'><strong>Follow Us!</strong></a></li>
                         <li >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                        <div>
+                        <li>
                         <a href='#' aria-label='Our instagram link'><img src={instagram} alt='Instagram Account' className='footerIcons' /></a>
                         <a href='#' aria-label='Our facebook page'><img src={facebook} alt='Facebook page' className='footerIcons' /></a>
                         <a href='#' aria-label='Our Twitter account'><img src={twitter} alt='Follow on Twitter' className='footerIcons' /></a> 
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>

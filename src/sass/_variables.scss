@@ -1,61 +1,141 @@
+ul {
+  list-style-type: none;
+}
+
+button {
+  transition: 0.1s ease-in;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hideElement {
+  display: none;
+}
+
+.aem-GridColumn {
+  padding: 1em;
+}
+
+//Padding classes
+.p-1 {
+  padding: 1em;
+}
+
+.py-1 {
+  padding: 1em 0;
+}
+
+.py-2 {
+  padding: 2em 0;
+}
+
+.px-1 {
+  padding: 0 1em;
+}
+
+//Padding classes
+.m-1 {
+  margin: 1em;
+}
+
+.my-1 {
+  margin: 1em 0;
+}
+
+.my-2 {
+  margin: 2em 0;
+}
+
+.mx-1 {
+  margin: 0 1em;
+}
+
+.customContainer {
+  padding: 0 2em;
+}
+
+//For hiding element on different devices
+
+.mobileHide {
+  display: block;
+}
+
+.desktopHide {
+  display: none;
+}
+
+.text_center {
+  text-align: center;
+  margin: auto;
+}
 
 
-    /* Colors: */
-    $primary-d1: #172BC4;
-    $primary-m1: #336DFF;
-    $primary-brand: #1F39FF;
-    $primary-l1: #3D84FF;
-    $gray-d2: #181C24;
-    $gray-d1: #535965;
-    $gray-m1: #91959C;
-    $gray-l2: #B5B7BC;
-    $gray-l1: #E5E5E7;
-    $white: #FFFFFF;
-    $positive-2: #12805C;
-    $positive-1: #268E6C;
-    $negative-2: #C9252D;
-    $negative-1: #D7373F;
-    $unnamed-color-172026: #172026;
-    
-    $oxford-blue-354e57: green;
-    $alabasterr-f7f7f7: wheat;
+/* Colors: */
+$primary-d1: #172BC4;
+$primary-m1: #336DFF;
+$primary-brand: #1F39FF;
+$primary-l1: #3D84FF;
+$gray-d2: #181C24;
+$gray-d1: #535965;
+$gray-m1: #91959C;
+$gray-l2: #B5B7BC;
+$gray-l1: #E5E5E7;
+$white: #FFFFFF;
+$positive-2: #12805C;
+$positive-1: #268E6C;
+$negative-2: #C9252D;
+$negative-1: #D7373F;
+$unnamed-color-172026: #172026;
 
-  
-    
-    
-    $colorsPanel: (
-        charcoal: $unnamed-color-172026,
-        white: $white,
-        green: #2D9D78,
-        golden: #FDBA5E ,
-        light-blue: $primary-l1,
-        light-red: #E34850,
-        purple: #6408D3 ,
-        pink: #F9009A ,
-        orange:#EB7327 
-    );
-    
-    @each $key, $value in $colorsPanel {
-        .bg-#{$key} {
-            background-color: $value;
-        }
-    }
-    
+$oxford-blue-354e57: green;
+$alabasterr-f7f7f7: wheat;
 
-    @mixin flexAlign {
-        display: flex;
-        align-items: center;
-    }
 
-    @mixin flexAlignJust{
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-    }
 
-    @mixin flexJust{
-        display: flex;
-        justify-content: center;
+$colorsPanel: (
+  charcoal: $unnamed-color-172026,
+  white: $white,
+  green: #2D9D78,
+  golden: #FDBA5E,
+  light-blue: $primary-l1,
+  light-red: #E34850,
+  purple: #6408D3,
+  pink: #F9009A,
+  orange:#EB7327
+);
 
-    }
+@each $key,
+$value in $colorsPanel {
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+
+
+@mixin flexAlign {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexAlignJust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@mixin flexJust {
+  display: flex;
+  justify-content: center;
+
+}

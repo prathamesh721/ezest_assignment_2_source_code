@@ -1,118 +1,23 @@
-ul {
-    list-style-type: none;
-}
 
-button {
-    transition: 0.1s ease-in;
-}
 
-button:hover {
-    transform: scale(0.98);
-}
 
-:root {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
+@import "aemGrid";
 
-.hideElement {
-    display: none;
-}
+@import "variables";
 
-.aem-GridColumn {
-    padding: 1em;
-}
-
-//Padding classes
-.p-1 {
-    padding: 1em;
-}
-
-.py-1 {
-    padding: 1em 0;
-}
-
-.py-2 {
-    padding: 2em 0;
-}
-
-.px-1 {
-    padding: 0 1em;
-
-}
-
-//Padding classes
-.m-1 {
-    margin: 1em;
-}
-
-.my-1 {
-    margin: 1em 0;
-}
-
-.my-2 {
-    margin: 2em 0;
-}
-
-.mx-1 {
-    margin: 0 1em;
-}
-
-.customContainer {
-    padding: 0 2em;
-}
-
-//For hiding element on different devices
-
-.mobileHide {
-    display: block;
-}
-
-.desktopHide {
-    display: none;
-}
-
-@font-face {
-    font-family: Muli;
-    src: url(../Assets/fonts/Muli-Black.ttf);
-    src: url(../Assets/fonts/Muli-BlackItalic.ttf);
-    src: url(../Assets/fonts/Muli-Bold.ttf);
-    src: url(../Assets/fonts/Muli-BoldItalic.ttf);
-    src: url(../Assets/fonts/Muli-ExtraBold.ttf);
-   
-    src: url(../Assets/fonts/Muli-ExtraBoldItalic.ttf);
-    src: url(../Assets/fonts/Muli-ExtraLight.ttf);
-    src: url(../Assets/fonts/Muli-ExtraLightItalic.ttf);
-    src: url(../Assets/fonts/Muli-Italic.ttf);
-    src: url(../Assets/fonts/Muli-Light.ttf);
-    src: url(../Assets/fonts/Muli-LightItalic.ttf);
-    
-    src: url(../Assets/fonts/Muli-Regular.ttf);
-    src: url(../Assets/fonts/Muli-SemiBold.ttf);
-    src: url(../Assets/fonts/Muli-SemiBoldItalic.ttf);
-  
-
-}
-
-@import 'aemGrid';
-
-@import 'variables';
-
-@import 'characterStyle';
+@import "characterStyle";
 
 // @import 'header';
-@import 'header2';
-@import 'loadingSpinner';
-@import 'heroBanner';
-@import 'checkBox';
-@import 'sideBar';
-@import 'shoppingCart';
-@import 'prodList';
-@import 'productComp';
-@import 'prodDetails';
-@import 'pagination';
-@import 'footer';
-@import 'phone';
-@import 'tablet';
+@import "header2";
+@import "loadingSpinner";
+@import "heroBanner";
+@import "checkBox";
+@import "sideBar";
+@import "shoppingCart";
+@import "prodList";
+@import "productComp";
+@import "prodDetails";
+@import "pagination";
+@import "footer";
+@import "phone";
+@import "tablet";

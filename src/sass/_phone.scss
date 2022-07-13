@@ -14,9 +14,10 @@
 
   header {
     .nav-links {
+     
       position: absolute;
-      top: 8vh;
-      height: 92vh;
+      top: 9vh;
+      height: 91vh;
       width: 100vw;
       left: 0;
       background-color: white;
@@ -74,9 +75,13 @@
     }
 
     .bottomLinks {
+      padding: 0.5em 0;
+      border-top: 1px solid black;
+      width: 100%;
       position: absolute;
       bottom: 2%;
       @include flexJust;
+     justify-content: start;
 
       a {
         padding: 0 1em;
@@ -180,6 +185,7 @@
   }
 
   /*============================Shopping Cart ============================*/
+  
 
   .sharingOption {
     display: none;
@@ -187,8 +193,9 @@
 
   .cartBtn {
     text-align: right;
-    margin-left: auto;
+    // margin-left: auto;
     @include flexAlignJust;
+    padding: 0
   }
 
   .sharingOuter {
@@ -198,7 +205,10 @@
   .leftSideCart {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
+
+ 
 
   /*============================Product Details============================*/
 
