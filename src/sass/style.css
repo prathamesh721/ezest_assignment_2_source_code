@@ -72,6 +72,24 @@ button:hover {
   display: none;
 }
 
+@font-face {
+  font-family: Muli;
+  src: url(../Assets/fonts/Muli-Black.ttf);
+  src: url(../Assets/fonts/Muli-BlackItalic.ttf);
+  src: url(../Assets/fonts/Muli-Bold.ttf);
+  src: url(../Assets/fonts/Muli-BoldItalic.ttf);
+  src: url(../Assets/fonts/Muli-ExtraBold.ttf);
+  src: url(../Assets/fonts/Muli-ExtraBoldItalic.ttf);
+  src: url(../Assets/fonts/Muli-ExtraLight.ttf);
+  src: url(../Assets/fonts/Muli-ExtraLightItalic.ttf);
+  src: url(../Assets/fonts/Muli-Italic.ttf);
+  src: url(../Assets/fonts/Muli-Light.ttf);
+  src: url(../Assets/fonts/Muli-LightItalic.ttf);
+  src: url(../Assets/fonts/Muli-Regular.ttf);
+  src: url(../Assets/fonts/Muli-SemiBold.ttf);
+  src: url(../Assets/fonts/Muli-SemiBoldItalic.ttf);
+}
+
 /*
  * ADOBE CONFIDENTIAL
  *
